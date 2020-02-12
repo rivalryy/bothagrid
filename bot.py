@@ -72,3 +72,4 @@ async def on_message ( message ):
 
 #run the bot safely
 token = os.environ.get('BOT_TOKEN')
+client.run(str(token))
