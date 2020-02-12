@@ -33,7 +33,7 @@ async def on_message ( message ):
 
 	if msg =='!хуй':
 		a = random.randint(0, 30)
-		await message.channel.send('{0.author.mention} твой хуй'.format(message) + str(a) + 'см')
+		await message.channel.send('{0.author.mention} твой хуй '.format(message) + str(a) + 'см')
 
 
 	if msg == '!лучший':
