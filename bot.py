@@ -49,10 +49,9 @@ async def on_message ( message ):
 
 	if msg == '!bagick':
 		
+
 		
-	        myid = '<@228814070822731776>'
-		
-		await message.channel.send(% myid + ' - местный лох-стример. Зовут Богдан (aka Богдакан), 19 лет, живет в Санкт-Петербурге. Так как он ну совсем долбоеб, он решил начать стримить. А еще у него есть собака Эри и канал трэч.тв https://www.twitch.tv/bagick')
+		await message.channel.send('@bagick - местный лох-стример. Зовут Богдан (aka Богдакан), 19 лет, живет в Санкт-Петербурге. Так как он ну совсем долбоеб, он решил начать стримить. А еще у него есть собака Эри и канал трэч.тв https://www.twitch.tv/bagick')
 
 	if msg in hello_words:
 		await message.channel.send('Zdarova yrod')
