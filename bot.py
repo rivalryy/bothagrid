@@ -23,53 +23,52 @@ async def on_ready():
 	print('Bot is online')
 
 
-@client.event
-async def on_message ( message ):
+@Bot.command( pass_context=True )
+async def battle( ctx ):
+
+	mentionedUser = ctx.message.raw_mentions
+	mUser = ' '.join(map(str, mentionedUser))
+	fUser = '<@' + mUser + '>'
 
 
-	msg = message.content.lower()
+	a = random.randint(0, 10)
+	b = random.randint(0, 10)
 
-	#сделано жесть как уебищно, найти как сделать через client.command
-
-	if msg =='!хуй':
-		a = random.randint(0, 30)
-		await message.channel.send('{0.author.mention} твой хуй '.format(message) + str(a) + 'см')
-
-
-	if msg == '!лучший':
-		await message.channel.send('Ну лучший в этом говнокоммьюнити бейджика это определенно @rivalryy')
-	
-	
-	if msg == '!расписание':
-		await message.channel.send('Нет никакого расписания, анонсы в группе вк (!vk)')
-
-	if msg == '!vk':
-		await message.channel.send('Неебические мемы + анонсы стримов тут: https://vk.com/bagickstreams')
+	if a < b:
+		await ctx.send ( fUser + ' накидал в ебучку {0.author.mention}'.format(ctx) )
+	if a > b:
+		await ctx.send( '{0.author.mention} накидал в ебучку '.format(ctx) + fUser )
+			
 
 
-	if msg == '!bagick':
-		
+@Bot.command(pass_context=True)
+async def xui(ctx):
+	a = random.randint(0, 30)
+	await ctx.send('{0.author.mention} твой хуй '.format(ctx) + str(a) + 'см')
 
-		
-		await message.channel.send('@bagick - местный лох-стример. Зовут Богдан (aka Богдакан), 19 лет, живет в Санкт-Петербурге. Так как он ну совсем долбоеб, он решил начать стримить. А еще у него есть собака Эри и канал трэч.тв https://www.twitch.tv/bagick')
+@Bot.command(pass_context=True)
+async def raspisanie(ctx):
+	await ctx.send('Нет никакого расписания, анонсы в группе вк (!vk)')
 
-	if msg in hello_words:
-		await message.channel.send('Zdarova yrod')
+@Bot.command(pass_context=True)
+async def vk(ctx):
+	await ctx.send('Неебические мемы + анонсы стримов тут: https://vk.com/bagickstreams')
 
+@Bot.command(pass_context=True)
+async def bagick(ctx):
+	await ctx.send('bagick - местный лох-стример. Зовут Богдан (aka Богдакан), 19 лет, живет в Санкт-Петербурге. Так как он ну совсем долбоеб, он решил начать стримить. А еще у него есть собака Эри и канал трэч.тв https://www.twitch.tv/bagick')
 
-	if msg == "!xyй":
-		await message.channel.send('Твой хуй 228 см')
+@Bot.command(pass_context=True)
+async def xyesos(ctx):
+	await ctx.send("Эй, {0.author.mention} хуесос! ".format(ctx))
 
+@Bot.command(pass_context=True)
+async def friends(ctx):
+	await ctx.send('Нет у тебя друзей, хуила!')
 
-	if msg == "!commandlist":
-		await message.channel.send('!хуй !лучший !расписание !vk !bagick !хуесос')
-
-	if msg == '!хуесос':
-		 await message.channel.send("Эй, {0.author.mention} хуесос! ".format(message))
-
-	if msg == '!друзья':
-		await message.channel.send('Нет у тебя друзей, хуила')
-
+@Bot.command(pass_context=True)
+async def commandlist(ctx):
+	await ctx.send('Все команды теперь транслитом !xui !raspisanie !vk !bagick !xyesos !friends !commandlist')
 
 
 
