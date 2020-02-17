@@ -75,4 +75,4 @@ async def commandlist(ctx):
 
 #run the bot safely
 token = os.environ.get('BOT_TOKEN')
-client.run(str(token))
+Bot.run(str(token))
