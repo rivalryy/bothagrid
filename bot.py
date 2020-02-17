@@ -36,11 +36,11 @@ async def battle( ctx ):
 	b = random.randint(0, 10)
 
 	if a < b:
-		await ctx.send ( fUser + ' накидал в ебучку {0.author.mention}'.format(ctx) )
+		await ctx.send ( '{0.author.mention} напал на '.format(ctx) + fUser + ' , но отхватил в ебучку' )
 	if a > b:
-		await ctx.send( '{0.author.mention} накидал в ебучку '.format(ctx) + fUser )
+		await ctx.send( '{0.author.mention} напал на '.format(ctx) + fUser + ' и накидал лоху в ебучку' )
 			
-
+				
 
 @Bot.command(pass_context=True)
 async def xui(ctx):
