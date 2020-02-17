@@ -2,3 +2,8 @@ discord.py
 aiohttp
 websockets
 chardet
+wrapt 
+lazy-object-proxy
+pylint
+astroid
+isort
