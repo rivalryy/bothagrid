@@ -1,11 +1,12 @@
-﻿import random
-import discord
-import os
-from discord.ext import commands
+import discord 
+from discord.ext import commands 
 from discord.ext.commands import Bot
 
+import random
+import os
 
-client = commands.Bot(command_prefix='!')
+
+Bot = commands.Bot(command_prefix='!')
 
 
 
@@ -18,7 +19,7 @@ hello_words = ['ky', 'привет', 'ку', 'здарова', 'хаэ' ]
 
 
 
-@client.event 
+@Bot.event 
 async def on_ready():
 	print('Bot is online')
 
