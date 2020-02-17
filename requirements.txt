@@ -7,3 +7,11 @@ lazy-object-proxy
 pylint
 astroid
 isort
+async-timeout
+attrs
+idna
+idna-ssl
+multidict
+pip
+setuptools
+yarl
