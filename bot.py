@@ -69,7 +69,7 @@ async def friends(ctx):
 
 @Bot.command(pass_context=True)
 async def commandlist(ctx):
-	await ctx.send('Все команды теперь транслитом !xui !raspisanie !vk !bagick !xyesos !friends !commandlist')
+	await ctx.send('Все команды теперь транслитом !xui !battle *тегай того, с кем баттлишься* !raspisanie !vk !bagick !xyesos !friends !commandlist')
 
 
 
