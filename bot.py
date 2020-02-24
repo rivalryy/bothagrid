@@ -57,7 +57,7 @@ async def vk(ctx):
 
 @Bot.command(pass_context=True)
 async def bagick(ctx):
-	await ctx.send('bagick - местный лох-стример. Зовут Богдан (aka Богдакан), 19 лет, живет в Санкт-Петербурге. Так как он ну совсем долбоеб, он решил начать стримить. А еще у него есть собака Эри и канал трэч.тв https://www.twitch.tv/bagick')
+	await ctx.send('<@228814070822731776> - местный лох-стример. Зовут Богдан (aka Богдакан), 19 лет, живет в Санкт-Петербурге. Так как он ну совсем долбоеб, он решил начать стримить. А еще у него есть собака Эри и канал трэч.тв https://www.twitch.tv/bagick')
 
 @Bot.command(pass_context=True)
 async def xyesos(ctx):
