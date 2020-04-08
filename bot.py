@@ -38,10 +38,10 @@ async def battle( ctx ):
 
 	if a < b:
 		await ctx.send ( '{0.author.mention} напал на '.format(ctx) + fUser + ' , но отхватил в ебучку' ) 
-		time.sleep(60)
+		
 	if a > b:
 		await ctx.send( '{0.author.mention} напал на '.format(ctx) + fUser + ' и накидал лоху в ебучку' )
-		time.sleep(60)
+		
 			
 				
 
@@ -49,7 +49,7 @@ async def battle( ctx ):
 async def xui(ctx):
 	a = random.randint(0, 30)
 	await ctx.send('{0.author.mention} твой хуй '.format(ctx) + str(a) + 'см')
-	time.sleep(3)
+	
 
 @Bot.command(pass_context=True)
 async def raspisanie(ctx):
