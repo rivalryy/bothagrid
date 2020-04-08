@@ -1,6 +1,7 @@
 import discord 
 from discord.ext import commands 
 from discord.ext.commands import Bot
+import time
 
 import random
 import os
@@ -36,9 +37,11 @@ async def battle( ctx ):
 	b = random.randint(0, 10)
 
 	if a < b:
-		await ctx.send ( '{0.author.mention} напал на '.format(ctx) + fUser + ' , но отхватил в ебучку' )
+		await ctx.send ( '{0.author.mention} напал на '.format(ctx) + fUser + ' , но отхватил в ебучку' ) 
+		time.sleep(120)
 	if a > b:
 		await ctx.send( '{0.author.mention} напал на '.format(ctx) + fUser + ' и накидал лоху в ебучку' )
+		time.sleep(120)
 			
 				
 
