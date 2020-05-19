@@ -47,7 +47,7 @@ async def battle( ctx ):
 
 @Bot.command(pass_context=True)
 async def xui(ctx):
-	a = random.randint(0, 30)
+	a = random.randint(0, 100)
 	await ctx.send('{0.author.mention} твой хуй '.format(ctx) + str(a) + 'см')
 	
 
