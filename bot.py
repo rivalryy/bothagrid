@@ -72,10 +72,10 @@ async def friends(ctx):
 	a = random.randint(1, 200)
 	
 	if a != 1:
-		await ctx.send('Нет у тебя друзей, хуйло на {0.author.mention}'.format(ctx))
+		await ctx.send('Нет у тебя друзей, хуйло')
 	
 	if a == 1:
-		await ctx.send('{0.author.mention} Ахуеть чел, у тебя есть друзья, вау!'.format(ctx))
+		await ctx.send('Ахуеть чел, у тебя есть друзья, вау!')
 
 @Bot.command(pass_context=True)
 async def commandlist(ctx):
