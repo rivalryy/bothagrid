@@ -69,7 +69,13 @@ async def xyesos(ctx):
 
 @Bot.command(pass_context=True)
 async def friends(ctx):
-	await ctx.send('Нет у тебя друзей, хуила!')
+	a = random.randint(0, 200)
+	
+	if a > 1:
+		await ctx.send('Нет у тебя друзей, хуила!')
+	
+	if a < 1:
+		await ctx.send('Ахуеть чел, у тебя есть друзья, вау!')
 
 @Bot.command(pass_context=True)
 async def commandlist(ctx):
