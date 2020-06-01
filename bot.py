@@ -69,17 +69,17 @@ async def xyesos(ctx):
 
 @Bot.command(pass_context=True)
 async def friends(ctx):
-	a = random.randint(0, 200)
+	a = random.randint(1, 2)
 	
-	if a > 1:
-		await ctx.send('Нет у тебя друзей, хуила!')
+	if a != 1:
+		await ctx.send('Нет у тебя друзей, хуйло на {0.author.mention}')
 	
-	if a < 50:
-		await ctx.send('Ахуеть чел, у тебя есть друзья, вау!')
+	if a == 1:
+		await ctx.send('{0.author.mention} Ахуеть чел, у тебя есть друзья, вау!')
 
 @Bot.command(pass_context=True)
 async def commandlist(ctx):
-	await ctx.send('Все команды теперь транслитом !xui !battle *тегай того, с кем баттлишься* !raspisanie !vk !bagick !xyesos !friends !commandlist')
+	await ctx.send('Все команды транслитом !xui !battle *тегай того, с кем баттлишься* !raspisanie !vk !bagick !xyesos !friends !commandlist')
 
 
 
