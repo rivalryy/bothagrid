@@ -74,7 +74,7 @@ async def friends(ctx):
 	if a > 1:
 		await ctx.send('Нет у тебя друзей, хуила!')
 	
-	if a < 1:
+	if a < 50:
 		await ctx.send('Ахуеть чел, у тебя есть друзья, вау!')
 
 @Bot.command(pass_context=True)
