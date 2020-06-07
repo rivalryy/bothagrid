@@ -66,6 +66,14 @@ async def bagick(ctx):
 @Bot.command(pass_context=True)
 async def xyesos(ctx):
 	await ctx.send("Эй, {0.author.mention} хуесос! ".format(ctx))
+	
+@Bot.command(pass_context=True)
+@commands.has_permissions(manage_messages=True)
+async def clear(ctx, amount=6):
+	await ctx.channel.purge(limit=amount)
+
+
+
 
 @Bot.command(pass_context=True)
 async def friends(ctx):
