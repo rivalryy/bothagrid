@@ -110,8 +110,8 @@ async def xyesos(ctx):
 	
 @Bot.command(pass_context=True)
 @commands.has_permissions(manage_messages=True)
-async def clear(ctx, amount=6):
-	await ctx.channel.purge(limit=amount)
+async def clear(ctx, amount=5):
+	await ctx.channel.purge(limit=amount+2)
 
 
 
