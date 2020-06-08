@@ -24,7 +24,48 @@ hello_words = ['ky', 'привет', 'ку', 'здарова', 'хаэ' ]
 async def on_ready():
 	print('Bot is online')
 
+@Bot.event
+async def on_raw_reaction_add(payload):
+    message_id = payload.message_id
+    if message_id == 719326703851274270:
+        guild_id = payload.guild_id
+        guild = discord.utils.find(lambda g : g.id == guild_id, Bot.guilds)
+    
+    role = discord.utils.get(guild.roles, name=payload.emoji.name)
+    if role is not None:
+        member = discord.utils.find(lambda m : m.id == payload.user_id, guild.members)
+        if member is not None:
+            await member.add_roles(role)
+            print ('Done')
+        else:
+            print ('Member not found')
+    else:
+        print ('Role not found') 
 
+
+@Bot.event
+async def on_raw_reaction_remove(payload):
+    message_id = payload.message_id
+    if message_id == 719326703851274270:
+        guild_id = payload.guild_id
+        guild = discord.utils.find(lambda g : g.id == guild_id, Bot.guilds)
+    
+    role = discord.utils.get(guild.roles, name=payload.emoji.name)
+    if role is not None:
+        member = discord.utils.find(lambda m : m.id == payload.user_id, guild.members)
+        if member is not None:
+            await member.remove_roles(role)
+            print ('Done')
+        else:
+            print ('Member not found')
+    else:
+        print ('Role not found')
+	
+	
+	
+	
+	
+	
 @Bot.command( pass_context=True )
 async def battle( ctx ):
 
