@@ -112,13 +112,8 @@ async def xyesos(ctx):
 @commands.has_permissions(manage_messages=True)
 async def clear(ctx, amount=5):
 	await ctx.channel.purge(limit=amount+2)
- 
-
-@Bot.event
-async def on_message(message)
-	if message.content == "!clear":
-		aut = message.author
-		print (aut + "used clear command")
+	aut = {0.author.mention}.format(ctx)
+ 	print (aut + "used clear command") 
 
 
 
