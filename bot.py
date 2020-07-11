@@ -118,7 +118,5 @@ async def commandlist(ctx):
 	await ctx.send('Все команды транслитом !xui !battle *тегай того, с кем баттлишься* !raspisanie !vk !bagick !xyesos !friends !commandlist')
 
 
-
-#run the bot safely
 token = os.environ.get('BOT_TOKEN')
 Bot.run(str(token))
