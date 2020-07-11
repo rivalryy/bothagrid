@@ -10,16 +10,6 @@ import os
 Bot = commands.Bot(command_prefix='!')
 
 
-
-
-
-#ключевые группы слов
-
-hello_words = ['ky', 'привет', 'ку', 'здарова', 'хаэ' ]
-
-
-
-
 @Bot.event 
 async def on_ready():
 	print('Bot is online')
@@ -60,8 +50,6 @@ async def on_raw_reaction_remove(payload):
             print ('Member not found')
     else:
         print ('Role not found')
-	
-	
 	
 	
 	
